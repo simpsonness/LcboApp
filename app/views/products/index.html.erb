@@ -1,0 +1,14 @@
+<h1>Products</h1>
+  <img src="http://www.danwei.org/2005123013485620229.gif"><br>
+
+  <h3><%= link_to "price from high to low", "/products/expensive_price" %><br></h3>
+
+  <h3><%= link_to "discontinued products", "/products/discontinued_product" %><br></h3>
+
+<% @products['result'].each do |product| %>
+<section>
+  <%= link_to product['name'], product_path(product['id']) %>
+  <%= format_price product['price_in_cents'] %>
+  <%= product['primary_category'] %>
+</section>
+<% end %>

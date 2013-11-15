@@ -1,0 +1,11 @@
+<h1>Discontinued Products</h1><br>
+
+<h3><%= link_to "back to products", "/products" %><br></h3>
+
+
+<% @discontinued_product_name.each do |name| %>
+<section>
+  <%= name %>
+</section>
+
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Products expensive price</h1>
+
+
+<h3><%=link_to "back to products", "/products" %></h3>
+
+<% @products_name_price.each do |k,v| %>
+<section>
+<%= k %> , <%= v %>
+</section>
+<% end %>
